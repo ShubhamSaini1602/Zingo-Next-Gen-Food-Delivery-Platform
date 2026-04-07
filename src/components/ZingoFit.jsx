@@ -7,6 +7,25 @@ import { Grill, PowerBowl, SaladBowl, Smoothie, Juice, ThirtyGram, FortyGram, Fi
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation, Mousewheel, FreeMode, Controller} from "swiper/modules";
 import Footer from "./Footer";
+import protein from "../utils/1.webp";
+import fat from "../utils/2.webp";
+import fiber from "../utils/3.webp";
+import carbs from "../utils/4.webp";
+import borderImg from "../utils/border-img.png";
+import calorieBtn from "../utils/calorieCalcBTN.png";
+import catchyImg from "../utils/catchy-img.png";
+import Food1 from "../utils/Food1.png";
+import Food2 from "../utils/Food2.png";
+import Food3 from "../utils/Food3.png";
+import Food4 from "../utils/Food4.png";
+import Food5 from "../utils/Food5.png";
+import Food6 from "../utils/Food6.png";
+import gymImg from "../utils/gym-img.png";
+import nutritionLeft from "../utils/nutrion-left.png";
+import nutritionRight from "../utils/nutrion-right.png";
+import plate from "../utils/plate.png";
+import sideImg from "../utils/side-img.webp";
+import whyImg from "../utils/why-img.png";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -146,9 +165,9 @@ function ZingoFit(){
         <>
         <header className="gym-header">
             <div className="ZingoFitLogo">
-                <img src="../src/utils/gym-img.png" className="gym-logo"></img>
-                <img src="../src/utils/side-img.webp" className="side1-img"></img>
-                <img src="../src/utils/side-img.webp" className="side2-img"></img>
+                <img src={gymImg} className="gym-logo"></img>
+                <img src={sideImg} className="side1-img"></img>
+                <img src={sideImg} className="side2-img"></img>
                 <Link to="/">
                     <button className="home-btn">Home</button>
                 </Link>
@@ -159,7 +178,7 @@ function ZingoFit(){
                     <button className="about-btn">About Us</button>
                 </a>
             </div>
-            <img src="../src/utils/catchy-img.png" className="catchy-img"></img>
+            <img src={catchyImg} className="catchy-img"></img>
         </header>
 
         <div className="animation" ref={container1}>
@@ -175,17 +194,17 @@ function ZingoFit(){
                 <h1 className="why-text">So Why Choose ZingoFit?</h1>
                 <p className="why-text1">Zingofit is not a diet system that promotes cleanses, pills, preserved foods or any kind of disordered eating habits. We’re all about wholesome &</p>
                 <p className="why-text2">nourishing foods that make you feel the best version of yourself.</p>
-                <img src="../src/utils/why-img.png" className="why-img"></img>
+                <img src={whyImg} className="why-img"></img>
 
-                <img src="../src/utils/plate.png" className="plate"></img>
+                <img src={plate} className="plate"></img>
             </div>
             {/* ------------------------------------------------------------------ */}
-            <img src="../src/utils/Food1.png" className="Food1"></img>
-            <img src="../src/utils/Food2.png" className="Food2"></img>
-            <img src="../src/utils/Food3.png" className="Food3"></img>
-            <img src="../src/utils/Food4.png" className="Food4"></img>
-            <img src="../src/utils/Food5.png" className="Food5"></img>
-            <img src="../src/utils/Food6.png" className="Food6"></img>
+            <img src={Food1} className="Food1"></img>
+            <img src={Food2} className="Food2"></img>
+            <img src={Food3} className="Food3"></img>
+            <img src={Food4} className="Food4"></img>
+            <img src={Food5} className="Food5"></img>
+            <img src={Food6} className="Food6"></img>
         </div>
 
         <h1 className="gym-menu">Our Menu</h1>
@@ -228,8 +247,8 @@ function ZingoFit(){
 
             <div className="nutrition">
                 <h1 className="nutritional-text">Nutritional Info</h1>
-                <img src="../src/utils/nutrion-left.png" className="img-left"></img>
-                <img src="../src/utils/nutrion-right.png" className="img-right"></img>
+                <img src={nutritionLeft} className="img-left"></img>
+                <img src={nutritionRight} className="img-right"></img>
                 <Swiper
                     modules={[Navigation,Mousewheel,FreeMode,Controller]}
                     spaceBetween={30}
@@ -262,22 +281,22 @@ function ZingoFit(){
                                             <p className="Price">Price : ₹{Obj.price}</p>
                                             <div className="nutrition-pic">
                                                 <div className="protein-info">
-                                                    <img src="../src/utils/1.webp" className="nutrition-img"></img>
+                                                    <img src={protein} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Protein</p>
                                                     <p className="nutrition-amt">{Obj.protein}g</p>
                                                 </div>
                                                 <div className="fat-info">
-                                                    <img src="../src/utils/2.webp" className="nutrition-img"></img>
+                                                    <img src={fat} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fat</p>
                                                     <p className="nutrition-amt">{Obj.fat}g</p>
                                                 </div>
                                                 <div className="fiber-info">
-                                                    <img src="../src/utils/3.webp" className="nutrition-img"></img>
+                                                    <img src={fiber} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fiber</p>
                                                     <p className="nutrition-amt">{Obj.fibre}g</p>
                                                 </div>
                                                 <div className="carbs-info">
-                                                    <img src="../src/utils/4.webp" className="nutrition-img"></img>
+                                                    <img src={carbs} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Carbs</p>
                                                     <p className="nutrition-amt">{Obj.carbs}g</p>
                                                 </div>
@@ -329,8 +348,8 @@ function ZingoFit(){
 
             <div className="nutrition">
                 <h1 className="nutritional-text">Nutritional Info</h1>
-                <img src="../src/utils/nutrion-left.png" className="img-left"></img>
-                <img src="../src/utils/nutrion-right.png" className="img-right"></img>
+                <img src={nutritionLeft} className="img-left"></img>
+                <img src={nutritionRight} className="img-right"></img>
                 <Swiper
                     modules={[Navigation,Mousewheel,FreeMode,Controller]}
                     spaceBetween={30}
@@ -363,22 +382,22 @@ function ZingoFit(){
                                             <p className="Price">Price : ₹{Obj.price}</p>
                                             <div className="nutrition-pic">
                                                 <div className="protein-info">
-                                                    <img src="../src/utils/1.webp" className="nutrition-img"></img>
+                                                    <img src={protein} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Protein</p>
                                                     <p className="nutrition-amt">{Obj.protein}g</p>
                                                 </div>
                                                 <div className="fat-info">
-                                                    <img src="../src/utils/2.webp" className="nutrition-img"></img>
+                                                    <img src={fat} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fat</p>
                                                     <p className="nutrition-amt">{Obj.fat}g</p>
                                                 </div>
                                                 <div className="fiber-info">
-                                                    <img src="../src/utils/3.webp" className="nutrition-img"></img>
+                                                    <img src={fiber} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fiber</p>
                                                     <p className="nutrition-amt">{Obj.fibre}g</p>
                                                 </div>
                                                 <div className="carbs-info">
-                                                    <img src="../src/utils/4.webp" className="nutrition-img"></img>
+                                                    <img src={carbs} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Carbs</p>
                                                     <p className="nutrition-amt">{Obj.carbs}g</p>
                                                 </div>
@@ -430,8 +449,8 @@ function ZingoFit(){
 
             <div className="nutrition">
                 <h1 className="nutritional-text">Nutritional Info</h1>
-                <img src="../src/utils/nutrion-left.png" className="img-left"></img>
-                <img src="../src/utils/nutrion-right.png" className="img-right"></img>
+                <img src={nutritionLeft} className="img-left"></img>
+                <img src={nutritionRight} className="img-right"></img>
                 <Swiper
                     modules={[Navigation,Mousewheel,FreeMode,Controller]}
                     spaceBetween={30}
@@ -464,22 +483,22 @@ function ZingoFit(){
                                             <p className="Price">Price : ₹{Obj.price}</p>
                                             <div className="nutrition-pic">
                                                 <div className="protein-info">
-                                                    <img src="../src/utils/1.webp" className="nutrition-img"></img>
+                                                    <img src={protein} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Protein</p>
                                                     <p className="nutrition-amt">{Obj.protein}g</p>
                                                 </div>
                                                 <div className="fat-info">
-                                                    <img src="../src/utils/2.webp" className="nutrition-img"></img>
+                                                    <img src={fat} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fat</p>
                                                     <p className="nutrition-amt">{Obj.fat}g</p>
                                                 </div>
                                                 <div className="fiber-info">
-                                                    <img src="../src/utils/3.webp" className="nutrition-img"></img>
+                                                    <img src={fiber} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fiber</p>
                                                     <p className="nutrition-amt">{Obj.fibre}g</p>
                                                 </div>
                                                 <div className="carbs-info">
-                                                    <img src="../src/utils/4.webp" className="nutrition-img"></img>
+                                                    <img src={carbs} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Carbs</p>
                                                     <p className="nutrition-amt">{Obj.carbs}g</p>
                                                 </div>
@@ -531,8 +550,8 @@ function ZingoFit(){
 
             <div className="nutrition">
                 <h1 className="nutritional-text">Nutritional Info</h1>
-                <img src="../src/utils/nutrion-left.png" className="img-left"></img>
-                <img src="../src/utils/nutrion-right.png" className="img-right"></img>
+                <img src={nutritionLeft} className="img-left"></img>
+                <img src={nutritionRight} className="img-right"></img>
                 <Swiper
                     modules={[Navigation,Mousewheel,FreeMode,Controller]}
                     spaceBetween={30}
@@ -565,22 +584,22 @@ function ZingoFit(){
                                             <p className="Price">Price : ₹{Obj.price}</p>
                                             <div className="nutrition-pic">
                                                 <div className="protein-info">
-                                                    <img src="../src/utils/1.webp" className="nutrition-img"></img>
+                                                    <img src={protein} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Protein</p>
                                                     <p className="nutrition-amt">{Obj.protein}g</p>
                                                 </div>
                                                 <div className="fat-info">
-                                                    <img src="../src/utils/2.webp" className="nutrition-img"></img>
+                                                    <img src={fat} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fat</p>
                                                     <p className="nutrition-amt">{Obj.fat}g</p>
                                                 </div>
                                                 <div className="fiber-info">
-                                                    <img src="../src/utils/3.webp" className="nutrition-img"></img>
+                                                    <img src={fiber} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fiber</p>
                                                     <p className="nutrition-amt">{Obj.fibre}g</p>
                                                 </div>
                                                 <div className="carbs-info">
-                                                    <img src="../src/utils/4.webp" className="nutrition-img"></img>
+                                                    <img src={carbs} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Carbs</p>
                                                     <p className="nutrition-amt">{Obj.carbs}g</p>
                                                 </div>
@@ -632,8 +651,8 @@ function ZingoFit(){
 
             <div className="nutrition">
                 <h1 className="nutritional-text">Nutritional Info</h1>
-                <img src="../src/utils/nutrion-left.png" className="img-left"></img>
-                <img src="../src/utils/nutrion-right.png" className="img-right"></img>
+                <img src={nutritionLeft} className="img-left"></img>
+                <img src={nutritionRight} className="img-right"></img>
                 <Swiper
                     modules={[Navigation,Mousewheel,FreeMode,Controller]}
                     spaceBetween={30}
@@ -666,22 +685,22 @@ function ZingoFit(){
                                             <p className="Price">Price : ₹{Obj.price}</p>
                                             <div className="nutrition-pic">
                                                 <div className="protein-info">
-                                                    <img src="../src/utils/1.webp" className="nutrition-img"></img>
+                                                    <img src={protein} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Protein</p>
                                                     <p className="nutrition-amt">{Obj.protein}g</p>
                                                 </div>
                                                 <div className="fat-info">
-                                                    <img src="../src/utils/2.webp" className="nutrition-img"></img>
+                                                    <img src={fat} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fat</p>
                                                     <p className="nutrition-amt">{Obj.fat}g</p>
                                                 </div>
                                                 <div className="fiber-info">
-                                                    <img src="../src/utils/3.webp" className="nutrition-img"></img>
+                                                    <img src={fiber} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fiber</p>
                                                     <p className="nutrition-amt">{Obj.fibre}g</p>
                                                 </div>
                                                 <div className="carbs-info">
-                                                    <img src="../src/utils/4.webp" className="nutrition-img"></img>
+                                                    <img src={carbs} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Carbs</p>
                                                     <p className="nutrition-amt">{Obj.carbs}g</p>
                                                 </div>
@@ -733,8 +752,8 @@ function ZingoFit(){
 
             <div className="nutrition">
                 <h1 className="nutritional-text">Nutritional Info</h1>
-                <img src="../src/utils/nutrion-left.png" className="img-left"></img>
-                <img src="../src/utils/nutrion-right.png" className="img-right"></img>
+                <img src={nutritionLeft} className="img-left"></img>
+                <img src={nutritionRight} className="img-right"></img>
                 <Swiper
                     modules={[Navigation,Mousewheel,FreeMode,Controller]}
                     spaceBetween={30}
@@ -767,22 +786,22 @@ function ZingoFit(){
                                             <p className="Price">Price : ₹{Obj.price}</p>
                                             <div className="nutrition-pic">
                                                 <div className="protein-info">
-                                                    <img src="../src/utils/1.webp" className="nutrition-img"></img>
+                                                    <img src={protein} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Protein</p>
                                                     <p className="nutrition-amt">{Obj.protein}g</p>
                                                 </div>
                                                 <div className="fat-info">
-                                                    <img src="../src/utils/2.webp" className="nutrition-img"></img>
+                                                    <img src={fat} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fat</p>
                                                     <p className="nutrition-amt">{Obj.fat}g</p>
                                                 </div>
                                                 <div className="fiber-info">
-                                                    <img src="../src/utils/3.webp" className="nutrition-img"></img>
+                                                    <img src={fiber} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fiber</p>
                                                     <p className="nutrition-amt">{Obj.fibre}g</p>
                                                 </div>
                                                 <div className="carbs-info">
-                                                    <img src="../src/utils/4.webp" className="nutrition-img"></img>
+                                                    <img src={carbs} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Carbs</p>
                                                     <p className="nutrition-amt">{Obj.carbs}g</p>
                                                 </div>
@@ -834,8 +853,8 @@ function ZingoFit(){
 
             <div className="nutrition">
                 <h1 className="nutritional-text">Nutritional Info</h1>
-                <img src="../src/utils/nutrion-left.png" className="img-left"></img>
-                <img src="../src/utils/nutrion-right.png" className="img-right"></img>
+                <img src={nutritionLeft} className="img-left"></img>
+                <img src={nutritionRight} className="img-right"></img>
                 <Swiper
                     modules={[Navigation,Mousewheel,FreeMode,Controller]}
                     spaceBetween={30}
@@ -868,22 +887,22 @@ function ZingoFit(){
                                             <p className="Price">Price : ₹{Obj.price}</p>
                                             <div className="nutrition-pic">
                                                 <div className="protein-info">
-                                                    <img src="../src/utils/1.webp" className="nutrition-img"></img>
+                                                    <img src={protein} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Protein</p>
                                                     <p className="nutrition-amt">{Obj.protein}g</p>
                                                 </div>
                                                 <div className="fat-info">
-                                                    <img src="../src/utils/2.webp" className="nutrition-img"></img>
+                                                    <img src={fat} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fat</p>
                                                     <p className="nutrition-amt">{Obj.fat}g</p>
                                                 </div>
                                                 <div className="fiber-info">
-                                                    <img src="../src/utils/3.webp" className="nutrition-img"></img>
+                                                    <img src={fiber} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fiber</p>
                                                     <p className="nutrition-amt">{Obj.fibre}g</p>
                                                 </div>
                                                 <div className="carbs-info">
-                                                    <img src="../src/utils/4.webp" className="nutrition-img"></img>
+                                                    <img src={carbs} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Carbs</p>
                                                     <p className="nutrition-amt">{Obj.carbs}g</p>
                                                 </div>
@@ -935,8 +954,8 @@ function ZingoFit(){
 
             <div className="nutrition">
                 <h1 className="nutritional-text">Nutritional Info</h1>
-                <img src="../src/utils/nutrion-left.png" className="img-left"></img>
-                <img src="../src/utils/nutrion-right.png" className="img-right"></img>
+                <img src={nutritionLeft} className="img-left"></img>
+                <img src={nutritionRight} className="img-right"></img>
                 <Swiper
                     modules={[Navigation,Mousewheel,FreeMode,Controller]}
                     spaceBetween={30}
@@ -969,22 +988,22 @@ function ZingoFit(){
                                             <p className="Price">Price : ₹{Obj.price}</p>
                                             <div className="nutrition-pic">
                                                 <div className="protein-info">
-                                                    <img src="../src/utils/1.webp" className="nutrition-img"></img>
+                                                    <img src={protein} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Protein</p>
                                                     <p className="nutrition-amt">{Obj.protein}g</p>
                                                 </div>
                                                 <div className="fat-info">
-                                                    <img src="../src/utils/2.webp" className="nutrition-img"></img>
+                                                    <img src={fat} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fat</p>
                                                     <p className="nutrition-amt">{Obj.fat}g</p>
                                                 </div>
                                                 <div className="fiber-info">
-                                                    <img src="../src/utils/3.webp" className="nutrition-img"></img>
+                                                    <img src={fiber} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Fiber</p>
                                                     <p className="nutrition-amt">{Obj.fibre}g</p>
                                                 </div>
                                                 <div className="carbs-info">
-                                                    <img src="../src/utils/4.webp" className="nutrition-img"></img>
+                                                    <img src={carbs} className="nutrition-img"></img>
                                                     <p className="nutrition-text">Carbs</p>
                                                     <p className="nutrition-amt">{Obj.carbs}g</p>
                                                 </div>
@@ -1000,7 +1019,7 @@ function ZingoFit(){
         </div>
 
         <div className="mail-list-container">
-            <img src="../src/utils/border-img.png" className="apple"></img>
+            <img src={borderImg} className="apple"></img>
             <div className="main-container">
                 <div className="combo-header">
                     <h1 className="header1">Join our</h1>
@@ -1119,7 +1138,7 @@ function ZingoFit(){
             <i className="ri-close-circle-fill" onClick={closeCalc}></i>
             </div>
         </div>
-        <img src="../src/utils/calorieCalcBTN.png" className="calorie-btn" onClick={openCalc}></img>
+        <img src={calorieBtn} className="calorie-btn" onClick={openCalc}></img>
         </>
     );
 }

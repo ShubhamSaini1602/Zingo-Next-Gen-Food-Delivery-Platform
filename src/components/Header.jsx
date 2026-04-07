@@ -2,6 +2,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { Link } from "react-router";
+import zingoHomeLogo from "../utils/zingo-home-logo.png";
 
 function Header(){
     const container=useRef();
@@ -163,7 +164,7 @@ function Header(){
         <div className="container1" ref={container}>
             <div className="first" ref={container}>
                 {/* Company Logo ---------------------------------------------- */}
-                <img src="../src/utils/zingo-home-logo.png" className="white-zingo"></img>
+                <img src={zingoHomeLogo} className="white-zingo"></img>
                 <div className="logo">
                     <h1>Zingo</h1>
                     <h2 id="Subsidiary">A Subsidiary of Swiggy</h2>

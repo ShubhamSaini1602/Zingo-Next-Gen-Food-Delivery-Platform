@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide} from "swiper/react";
 import { Navigation, Mousewheel, FreeMode,} from "swiper/modules";
 import Shimmer1 from "./Shimmer1";
 import { useSelector } from "react-redux";
+import orangeZingo from "../utils/orange-zingo.png";
 
 import "swiper/css";
 import "swiper/css/navigation";

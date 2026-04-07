@@ -1,8 +1,10 @@
+import signInImg from "../utils/Signin.png";
+
 function SignIn(){
     return (
         <>
         <div className="img_form">
-            <img src="../src/utils/Signin.png" className="signinPic"></img>
+            <img src={signInImg} className="signinPic"></img>
             <form className="form">
                 <h1 className="text-layer">Sign In</h1>
                 <div className="input-group">

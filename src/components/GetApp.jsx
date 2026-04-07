@@ -1,3 +1,5 @@
+import simpleImg from "../utils/image.png";
+
 function GetApp(){
     return (
         <>
@@ -7,7 +9,7 @@ function GetApp(){
                 <h1 className="get-app-now">Get the Zingo App now!</h1>
                 <p className="best-offers">For best offers and discounts curated specially for you.</p>
             </div>
-            <img src="../src/utils/image.png" className="QR"></img>
+            <img src={simpleImg} className="QR"></img>
         </div>
         </>
     );
