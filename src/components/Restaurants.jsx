@@ -43,7 +43,7 @@ function Restaurants(){
         <>
         <div className="header-2">
             <Link to="/">
-                <img src="../src/utils/orange-zingo.png" className="orange-zingo"></img>
+                <img src={orangeZingo} className="orange-zingo"></img>
             </Link>
 
             <div className="navbar-2">
