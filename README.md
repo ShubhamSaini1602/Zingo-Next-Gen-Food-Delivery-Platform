@@ -1,4 +1,42 @@
 # 🍽️ Zingo — Next-Gen Food Delivery Platform
+🌐 **Live Demo:** https://zingo-web.netlify.app
+
+---
+
+# 🚀 Getting Started
+
+Follow the steps below to run Zingo on your local machine 👇
+
+### 1️⃣ Clone or Download the Repository
+Download the complete repository and open it in your preferred IDE.
+
+### 2️⃣ Install Dependencies
+Before running the app, install all required npm packages.
+
+Open the terminal inside the project folder and run:
+
+```bash
+npm install
+```
+### 3️⃣ Enable Proxy Access
+Zingo uses a proxy server to handle CORS (Cross-Origin Resource Sharing) issues while fetching APIs.
+
+Before running the project, visit the link below and request temporary access to the proxy server:
+
+```bash
+🔗 https://cors-anywhere.herokuapp.com/corsdemo
+```
+> ⚠️ This step is required. Without enabling proxy access, some API requests may fail because of browser CORS restrictions.
+
+### 4️⃣ Start the Development Server
+After installing dependencies and enabling proxy access, start the project with:
+
+```bash
+npm run dev
+```
+
+
+---
 
 ## 🚀 Overview
 
