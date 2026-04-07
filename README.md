@@ -1,6 +1,14 @@
 # 🍽️ Zingo — Next-Gen Food Delivery Platform
 🌐 **Live Demo:** https://zingo-web.netlify.app
 
+> [!NOTE]
+> Zingo uses a proxy server to handle CORS (Cross-Origin Resource Sharing) issues while fetching APIs.
+> Before clicking on `LIVE DEMO`, visit the link below and request temporary access to the proxy server:
+```bash
+🔗 https://cors-anywhere.herokuapp.com/corsdemo
+```
+> ⚠️ This step is required. Without enabling proxy access, some API requests may fail because of browser CORS restrictions.
+
 ---
 
 # 🚀 Getting Started
