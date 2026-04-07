@@ -1,0 +1,3345 @@
+/* -----------Reset Browser Default Properties--------------- */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    /* Add this line to prevent horizontal scrolling which occurred due to shifting of menu*/
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+/* ------------------------------- */
+
+.container1{
+    background-color: #ff5200;
+    /* ------------------------- */
+    position: relative;
+}
+
+.first{
+    padding: 25px;
+    display: flex;
+}
+
+.white-zingo{
+    height: 60px;
+    margin-right: 5px;
+}
+
+.logo{
+    font-family: "Mozilla Headline", sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+#Subsidiary{
+    font-family: "Playwrite AU QLD", cursive;
+    font-size: 20px;
+    color: black;
+}
+
+.navbar{
+    display: flex;
+    gap: 30px;
+    margin-left: 550px;
+}
+
+.card{
+    width: 110px;
+    height: 87.5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    border-radius: 10px;
+    /* Transparent so that behind cards can be seen */
+    background: linear-gradient(to top,#a07120,transparent);
+    backdrop-filter: blur(2px);
+    /* Be specific about what you're animating for better performance */
+    transition: transform 0.5s, backdrop-filter 1s;
+}
+
+ion-icon{
+    font-size: 30px;
+}
+
+ion-icon[name="home"]{
+    color: #00FFFF;
+}
+
+ion-icon[name="information-circle"]{
+    color: #4169E1;
+}
+
+ion-icon[name="call"]{
+    color: #4B0082;
+}
+
+ion-icon[name="log-in"]{
+    color: #800080;
+}
+
+.iconText{
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: white;
+    text-decoration: overline;
+}
+
+.iconText:hover{
+    transform: scale(1.1);
+}
+
+.card1{
+    /* For overlapping cards */
+    transform: translateX(-20px) rotate(-15deg);
+}
+
+.card2{
+    /* For overlapping cards */
+    transform: translateX(-90px) rotate(5deg);
+}
+
+.card3{
+    /* For overlapping cards */
+    transform: translateX(-160px) rotate(25deg);
+}
+
+.card4{
+    /* For overlapping cards */
+    transform: translateX(-230px) rotate(-15deg);
+}
+
+.navbar:hover .card{
+    cursor: pointer;
+    /* The blur is very expensive to animate. We will transition it off. */
+    backdrop-filter: none;
+    /* Reset translate and rotation we had given earlier */
+    transform: none;
+}
+
+.card-link,
+.card-link:visited {
+  /* This prevents the text/icon from turning blue or purple */
+  color: inherit;
+
+  /* This removes the underline */
+  text-decoration: none;
+}
+
+.menu{
+    color: white;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+ion-icon[name="grid"]:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* ----------------------------------------------------------------- */
+/* Menu */
+.side-menu{
+    /* background-color: red; */
+    height: 100vh;
+    /* not absolute because the menu should stay locked in the same spot on the screen even when the page scrolls */
+    position: fixed;
+    top: 0px;
+    right: -400px;
+    width: 400px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    /* Because this side-menu was appearing behind the image */
+    z-index: 999;
+}
+
+.Menu,.Help,.Partner,.GetApp,.Terms,.social-links,.Ride{
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    font-size: 25px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.Menu{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.social-links{
+    margin-top: 200px;
+    margin-left: 80px;
+}
+
+.menu-text{
+    transition: transform 1s, color 1s, text-decoration 1s;
+}
+
+.menu-text:hover{
+    cursor: pointer;
+    transform: translateX(10px) scale(1.05);
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.ri-linkedin-box-fill:hover,
+.ri-instagram-fill:hover,
+.ri-facebook-circle-fill:hover,
+.ri-pinterest-fill:hover,
+.ri-twitter-fill:hover {
+    cursor: pointer;
+    color: greenyellow;
+}
+
+.menu-link,
+.menu-link:visited{
+    color:inherit;
+    text-decoration: none;
+}
+
+/* Close button */
+.ri-close-large-fill{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: 35px;
+    margin-right: 35px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.ri-close-large-fill:hover{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+}
+/* ----------------------------------------------- */
+/* Second container CSS */
+
+.second{
+    margin-top: 70px;
+}
+
+.text1, .text2{
+    text-align: center;
+    font-size: 40px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.inputElements{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+#drop-down, #searchbox{
+    font-size: 18px;
+    font-family: "Nata Sans", sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 18px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.box-icon{
+    /* background-color: red; */
+    /* Making space in searchbox's parent */
+    display: flex;
+    width: 100%;
+    max-width: 35%;
+    /* Icon's position is absolute, thus its parent should have some position property as well */
+    position: relative;
+}
+
+#searchbox{
+    flex-grow: 1;
+    min-width: 0px;
+}
+
+.ri-search-line{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 25px;
+    padding: 18px;
+}
+/* ---------------------------------- */
+/* Images */
+
+.img1{
+    height: 650px;
+    position: absolute;
+    top: 100px;
+    left: -325px;
+}
+
+.img2{
+    height: 650px;
+    position: absolute;
+    top: 100px;
+    right: -325px;
+}
+/* ------------------------------------- */
+/* card-container */
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.img{
+    height: 300px;
+    /* ------------------- */
+    z-index: 100;
+    /* ---------------------- */
+    transition: transform 0.5s;
+}
+
+.img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.CARD{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BUTTON{
+    font-size: 20px;
+    padding: 5px 30px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    background: transparent;
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    /* ---------------------- */
+    position:relative;
+    bottom: 150px;
+    z-index: 99;
+}
+
+.BUTTON:hover{
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    box-shadow: 
+        0 0 15px rgba(255, 255, 255, 0.7),
+        0 0 30px rgba(255, 255, 255, 0.6),
+        0 0 60px rgba(255, 255, 255, 0.5);
+}
+/* ------------------------------------------ */
+/* Infinite slider */
+
+.marquee .swiper{
+    width: 100%;
+    background-color: #D9FF06;
+    margin-top: 50px;
+    margin-bottom: 120px;
+}
+
+.marquee .swiper-slide{
+    width: 840px !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.marquee .content{
+    display: flex;
+    gap: 80px;
+}
+
+.marquee .swiper-text1{
+    font-size: 100px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.marquee .swiper-text2{
+    font-size: 100px;
+    font-family: "Caveat", cursive;
+    font-weight: bolder;
+}
+
+.marquee .swiper-img{
+    height: 80px;
+    /* ---------- */
+    position: relative;
+    top: 22px;
+} 
+
+.marquee .swiper-wrapper{
+    transition-timing-function: linear !important;
+}
+/* ----------------------------------------------------- */
+/* Food Slider */
+/* ------------------Fast-food Slider----------------------- */
+.foodslider .swiper{
+    width: 85%;
+    background: linear-gradient(
+    180deg,
+    #fff7eb 0%,       /* soft cream */
+    #ffd39f 20%,      /* peach */
+    #ff9a4c 60%,      /* warm orange */
+    #ff6b1a 100%      /* deep burnt orange */
+  );
+  margin-bottom: 150px;
+  border-radius: 20px;
+}
+
+.foodslider .swiper-slide{
+    width: 200px !important;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25); /* soft shadow */
+    border-radius: 20px;
+}
+
+.foodslider .swiper-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+
+.foodslider .swiper-slide-active .swiper-img{
+    transform: none;
+    filter: grayscale(0);
+}
+/* Styling our Custom navigation buttons */
+.foodslider{
+    /* Make the parent relative */
+    position: relative;
+}
+
+.foodslider .my-swiper-button-prev,
+.foodslider .my-swiper-button-next {
+    font-size: 60px;
+    color: #ff6b1a;
+}
+
+.foodslider .my-swiper-button-prev:hover,
+.foodslider .my-swiper-button-next:hover{
+    cursor: pointer;
+}
+
+.foodslider .my-swiper-button-prev{
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    left: 20px;
+    display: inline-block;
+}
+
+.foodslider .my-swiper-button-next{
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    right: 20px;
+    display: inline-block;
+}
+
+.foodslider .swiper-pagination-bullet-active{
+    background: linear-gradient(45deg, #603a3a, #8d300f);
+    width: 24px;
+    height: 8px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/* ---------------------Groceries Slider------------------- */
+
+.groceriesSlider .swiper{
+    width: 85%;
+    background: linear-gradient(
+    180deg,
+    #fff7eb 0%,       /* soft cream */
+    #ffd39f 20%,      /* peach */
+    #ff9a4c 60%,      /* warm orange */
+    #ff6b1a 100%      /* deep burnt orange */
+  );
+  margin-bottom: 200px;
+  border-radius: 20px;
+}
+
+.groceriesSlider .swiper-slide{
+    width: 200px !important;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.groceriesSlider .swiper-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    filter: grayscale(1);
+    transition: 0.5s;
+    background: transparent;
+}
+
+.groceriesSlider .swiper-slide-active .swiper-img{
+    transform: none;
+    filter: grayscale(0);
+}
+/* Styling our Custom navigation buttons */
+.groceriesSlider{
+    /* Make the parent relative */
+    position: relative;
+}
+
+.groceriesSlider .My-swiper-button-prev,
+.groceriesSlider .My-swiper-button-next {
+    font-size: 60px;
+    color: #ff6b1a;
+}
+
+.groceriesSlider .My-swiper-button-prev:hover,
+.groceriesSlider .My-swiper-button-next:hover{
+    cursor: pointer;
+}
+
+.groceriesSlider .My-swiper-button-prev{
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    left: 20px;
+    display: inline-block;
+}
+
+.groceriesSlider .My-swiper-button-next{
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    right: 20px;
+    display: inline-block;
+}
+
+.groceriesSlider .swiper-text{
+    font-size: 20px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: rgba(2, 6, 12, 0.75);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.grocery-title{
+    font-family: "Bricolage Grotesque", sans-serif;
+    margin-bottom: 30px;
+    position: relative;
+    left: 120px;
+}
+
+.groceriesSlider .swiper-pagination-bullet-active{
+    background: linear-gradient(45deg, #603a3a, #8d300f);
+    width: 24px;
+    height: 8px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/* ----------------------------------------------------------- */
+
+.hotelslider .swiper{
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.hotelslider .swiper-slide{
+    width: 450px !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.hotelslider .swiper-img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.hotelslider .CARD{
+    background-color: rgb(234, 234, 234);
+}
+
+.FIRST, .SECOND, .THIRD, .FOURTH, .FIFTH{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.FIRST{
+    position: absolute;
+    top: 310px;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.hotel-name{
+    color: white;
+    font-size: 19px;
+}
+
+.rating-div{
+    display: flex;
+    font-size: 20px;
+    color: white;
+}
+
+ion-icon[name="star"]{
+    background-color: #267E3E;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 5px;
+    position: relative;
+    top: 2px;
+    right: 5px;
+}
+
+.overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(to top,rgba(0,0,0,0.8),transparent);
+}
+
+.SECOND{
+    padding-top: 15px;
+}
+
+.offers{
+    background-color: #267E3E;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+/* ----------------------------------------- */
+/* Make the parent relative */
+.hotelslider{
+    position: relative;
+}
+
+.hotelslider .MY-swiper-button-prev,
+.hotelslider .MY-swiper-button-next {
+    font-size: 40px;
+    color: #267E3E;
+}
+
+.hotelslider .MY-swiper-button-prev:hover,
+.hotelslider .MY-swiper-button-next:hover{
+    cursor: pointer;
+}
+
+.hotelslider .MY-swiper-button-prev{
+    position: absolute;
+    z-index: 10;
+    bottom: 0px;
+    left: 610px;
+    display: inline-block;
+}
+
+.hotelslider .MY-swiper-button-next{
+    position: absolute;
+    z-index: 10;
+    bottom: 0px;
+    right: 610px;
+    display: inline-block;
+}
+
+.hotel-title{
+    font-family: "Bricolage Grotesque", sans-serif;
+    margin-bottom: 30px;
+    position: relative;
+    left: 120px;
+}
+
+.hotelslider .swiper-pagination-bullet-active{
+    background-color: #267E3E;
+    width: 24px;
+    height: 8px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+/* ------------------------------------ */
+/* Get App now */
+
+.get-app{
+    background-color: #161B1F;
+    height: 300px;
+    display: flex;
+    gap: 200px;
+    margin-bottom: 100px;
+}
+
+.text-container{
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-name{
+    font-family: "Mozilla Headline", sans-serif;
+    font-size: 25px;
+    color: #F94F08;
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.get-app-now{
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.best-offers{
+    color: #7B8084;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* ------------------------------------ */
+
+.footer{
+    background-color: #F0F0F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-footer{
+    padding: 30px;
+}
+
+.company-name{
+    font-family: "Mozilla Headline", sans-serif;
+    color: #F94F08;
+    margin-bottom: 5px;
+}
+
+.copyright{
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: #616469;
+}
+
+.last-footer-section{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+
+.footer-text{
+    font-size: 24px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    color: rgba(2, 6, 12, 0.75);
+    margin-top: 20px;
+}
+
+.google-play:hover, .apple-store:hover{
+    cursor: pointer;
+}
+/* --------------------------------------------- */
+/* Sign In Page */
+/* Use white color for all box shadows and borders. */
+
+.img_form{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signinPic{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.form{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    width: 380px;
+    padding: 40px;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+.text-layer{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.input-group{
+    margin-bottom: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label{
+    color: white;
+    margin-bottom: 5px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 20px;
+}
+
+.input-group input{
+    padding: 10px;
+    font-size: 17px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    color: white;
+}
+
+.input-group input::placeholder{
+    color: white;
+}
+
+.input-group input:focus{
+    border-color: rgba(255,255,255,0.7);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+.signin-btn{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.signin-btn:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.social-text{
+    margin-top: 15px;
+    color: white;
+    font-size: 17px;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.social-btns{
+    margin-top: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.GOOGLE:hover, .FACEBOOK:hover, .INSTAGRAM:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255);
+}
+/* ----------------------------------------- */
+/* Gym Section */
+
+.gym-section{
+    padding: 15px;
+    position: relative;
+}
+
+.gym-button{
+    font-size: 25px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    padding: 5px 45px 5px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 50px; /* For pill-shaped button */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ri-leaf-fill{
+    position: absolute;
+    font-size: 25px;
+    top: 30%;
+    left: 140px;
+    color: green
+}
+
+.gym-button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+}
+/* ----------------------------------------------------- */
+/* gym-page */
+
+.gym-header{
+    position: relative;
+}
+
+.ZingoFitLogo{
+    background-color: #F2F2F2;
+}
+
+.gym-logo{
+    height: 170px;
+    margin-left: 50px;
+}
+
+.side1-img{
+    height: 181px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.side2-img{
+    height: 181px;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    transform: rotate(180deg);
+}
+
+.home-btn, .contact-btn, .about-btn{
+    position: relative;
+    bottom: 80px;
+    left: 500px;
+    font-size: 20px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    padding: 5px 20px;
+    background: linear-gradient(45deg, #4CAF50, #8BC34A);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.6), 
+                0 0 20px rgba(139, 195, 74, 0.6);
+    transition: transform 0.3s;
+    margin-right: 50px;
+}
+
+.home-btn:hover, .contact-btn:hover, .about-btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    /* Stronger glow on hover */
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.8), 
+                0 0 30px rgba(139, 195, 74, 0.8), 
+}
+
+.catchy-img{
+    height: 900px;
+    margin-bottom: 60px;
+}
+/* ----------------------------------- */
+
+.animation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    position: relative;
+}
+
+.gym-text-container{
+    width: 740px;
+    margin-top: 381px;
+}
+
+.gym-text1{
+    text-align: center;
+    font-size: 40px;
+    font-family: "Playwrite AU QLD", cursive;
+}
+
+.gym-text2{
+    font-size: 30px;
+    color: #8EC038;
+    font-family: "Bricolage Grotesque", sans-serif;
+    margin-bottom: 20px;
+}
+
+.gym-text3{
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+}
+/* ----------------------------------- */
+
+.why-container{
+    background-color: #F3F5ED;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.benefits{
+    font-size: 30px;
+    font-family: "Playwrite AU QLD", cursive;
+    color: rgb(142, 192, 56);
+    margin-top: 150px;
+}
+
+.why-text{
+    font-size: 50px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    margin-bottom: 25px;
+}
+
+.why-text1, .why-text2{
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.why-text1{
+    margin-bottom: 10px;
+}
+
+.plate{
+    height: 300px;
+}
+/* ------------------------- */
+
+.Food1, .Food2, .Food3, .Food4, .Food5, .Food6{
+    height: 350px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.Food1{
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+
+.Food2{
+    top: 320px;
+    left: 0px;
+}
+
+.Food3{
+    top: 650px;
+    left: 0px;
+}
+
+.Food4{
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+}
+
+.Food5{
+    top: 320px;
+    right: 0px;
+}
+
+.Food6{
+    top: 650px;
+    right: 0px;
+}
+/* --------------------------------- */
+
+.gym-menu{
+    font-size: 40px;
+    font-family: "Playwrite AU QLD", cursive;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.gym-menu-text{
+    font-size: 25px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    text-align: center;
+    color: #999999;
+    margin-bottom: 100px;
+}
+
+/* -------------------------------------------- */
+/* Grill-Grain Meal Boxes */
+.grill-grain .swiper-slide{
+    width: 400px !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.grill-grain .swiper-img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    filter: grayscale(0.8);
+    transition: filter 0.5s;
+}
+
+.grill-grain .swiper-slide-active .swiper-img{
+    filter: grayscale(0);
+}
+
+.grill-grain .swiper-text{
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: #666666;
+}
+
+.grill-grain .food-INFO{
+    margin-left: 95px;
+    font-size: 18px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#Veg{
+    background-color: #008000;
+}
+
+#Non-Veg{
+    background-color: #A52A2A;
+}
+
+.grill-grain .food-INFO:hover{
+    cursor: pointer;
+}
+/* -------------------------------------- */
+
+.nutrition .swiper{
+    height: 725px;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    background-color: white;
+}
+
+.nutrition .swiper-slide{
+    background-color: #F5F5F5;
+}
+
+.nutrition .nutrition-info{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* To center a entire group of rows we use align-content property */
+    align-content: center;
+}
+
+.nutrition .BOX{
+    background-color: rgba(147, 247, 198, 0.2);
+    width: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: green;
+}
+
+.nutrition .food_name{
+    background-color: rgba(128, 128, 128, 0.231);
+    font-size: 20px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.nutrition .calories{
+    background-color: #fc9002;
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.nutrition .Price{
+    background-color: #09c709;
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.nutrition .nutrition-pic{
+    display: flex;
+    gap: 60px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+.protein-info, .fat-info, .fiber-info, .carbs-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nutrition .nutrition-img{
+    height: 50px;
+}
+
+.nutrition .nutrition-text{
+    font-size: 17px;
+    font-family: "Playwrite AU QLD", cursive;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.nutrition .nutrition-amt{
+    color: #66a512;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nutrition .nutritional-text{
+    font-family: "Playwrite AU QLD", cursive;
+    color: #8EC038;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.grill-grain .grill-grain-text{
+    font-family: "Bricolage Grotesque", sans-serif;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-left: 150px;
+}
+
+.synced-swipers{
+    margin-bottom: 150px;
+}
+
+.nutrition{
+    position: relative;
+}
+
+.img-left{
+    position: absolute;
+    top: 200px;
+    left: -110px;
+}
+
+.img-right{
+    position: absolute;
+    top: 150px;
+    right: 20px;
+}
+
+/* ----------------------------------------------------- */
+/* Power Bowls & Salab Bowls & Smoothie & Juice & 30gm & 40gm & 50gm*/
+/* Positioning the Nutrition Info BOX in the center */
+.BOX_1{
+    margin-top: 170px;
+}
+/* -------------------------------------- */
+
+.apple{
+    height: 218px;
+}
+
+.main-container{
+    background-color: #8EC038;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.combo-header{
+    margin-top: 100px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.header1{
+    font-size: 45px;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.header2{
+    font-size: 45px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: white;
+}
+
+.para1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 40px;
+}
+
+.input-btn{
+    display: flex;
+    width: 100%;
+    max-width: 40%;
+    margin-bottom: 100px;
+}
+
+#Input{
+    font-size: 18px;
+    padding: 20px 30px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    min-width: 0px;
+}
+
+.SUBSCRIBE{
+    position: absolute;
+    font-size: 18px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    padding: 20px 30px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    left: 926px;
+}
+
+.SUBSCRIBE:hover{
+    cursor: pointer;
+    background-color: #940505;
+}
+
+.mail-list-container{
+    margin-bottom: 70px;
+}
+/* ---------------------------------------------- */
+/* CALORIE CALCULATOR */
+
+.calorie-btn{
+    height: 100px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    z-index: 10000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #66BEE3;
+    transition: all 0.3s;
+}
+
+.calorie-btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.calculator-container{
+    position: fixed;
+    top: 0px;
+    right: -500px;
+    background-color: white;
+    z-index: 11000;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    height: 100vh;
+    width: 500px;
+    overflow-y: auto;
+}
+
+.form-panel{
+    padding: 40px;
+}
+
+.calculator-title{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.calculator-description{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #4B5563;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.GENDER{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.gender-group{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 15px;
+}
+
+#FIRST, #SECOND{
+    transform: scale(1.7);
+    margin-right: 10px;
+}
+
+.male-label, .female-label{
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.age-group, .weight-group, .height-group, .activity-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.activity-group{
+    margin-bottom: 30px;
+}
+
+.age-label, .weight-label, .height-label, .dropdown-label{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    color: #374151;
+}
+
+#THIRD, #FOURTH, #FIFTH, .form-select{
+    flex-grow: 1;
+    min-width: 0px;
+    font-size: 15px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #a4a4a4;
+    transition: all 0.3s ease;
+}
+
+::placeholder{
+    color: #9CA3AF;
+    font-weight: bold;
+}
+
+#THIRD:focus, #FOURTH:focus, #FIFTH:focus{
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+.button-group{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.calc-btn, .clear-btn{
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.calc-btn{
+    background-color: #2563EB;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.calc-btn:hover{
+    cursor: pointer;
+    background-color: #1D4ED8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.clear-btn{
+    background-color: #E5E7EB;
+    color: #232427; 
+}
+
+.clear-btn:hover{
+    cursor: pointer;
+    background-color: #D1D5DB; 
+}
+
+.initial-message-icon {
+    height: 96px;
+    color: #BFDBFE;
+    margin-left: 202px;
+}
+
+.results-title {
+    font-size: 24px;
+    font-family: "Playwrite AU QLD", cursive;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.results-para{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.error-message {
+    padding: 16px;
+    background-color: #FEE2E2;
+    color: #B91C1C;
+    border-radius: 8px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.w-full{
+    margin-bottom: 30px;
+}
+
+.results-list{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.card-green{
+    background-color: #D1FAE5;
+    border-radius: 10px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #10B981;
+    margin-bottom: 16px;
+}
+
+.card-green .result-card-title{
+    color: #04533c;
+    font-weight: 900;
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding: 15px 0px 3px 15px;
+}
+
+.card-green .result-card-value{
+    color: #04533c;
+    font-size: 30px;
+    font-weight: 1000;
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding: 0px 0px 3px 15px;
+}
+
+.result-card-desc{
+    color: #04533c;
+    font-weight: 500;
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding: 0px 0px 15px 15px;
+}
+
+.card-yellow{
+    background-color:  #FEF3C7;
+    border-radius: 10px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #F59E0B;
+    margin-bottom: 16px;
+}
+
+.card-yellow .result-card-title{
+    color: #92400E;
+    font-weight: 900;
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding: 15px 0px 3px 15px;
+}
+
+.card-yellow .result-card-value{
+    color: #92400E;
+    font-size: 30px;
+    font-weight: 1000;
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding: 0px 0px 20px 15px;
+}
+
+.card-orange{
+    background-color:  #FFEDD5;
+    border-radius: 10px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #F97316;
+    margin-bottom: 16px;
+}
+
+.card-orange .result-card-title{
+    color: #9A3412;
+    font-weight: 900;
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding: 15px 0px 3px 15px;
+}
+
+.card-orange .result-card-value{
+    color: #9A3412;
+    font-size: 30px;
+    font-weight: 1000;
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding: 0px 0px 20px 15px;
+}
+
+.card-red{
+    background-color:  #FEE2E2;
+    border-radius: 10px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #EF4444;
+    margin-bottom: 16px;
+}
+
+.card-red .result-card-title{
+    color: #991B1B;
+    font-weight: 900;
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding: 15px 0px 3px 15px;
+}
+
+.card-red .result-card-value{
+    color: #991B1B;
+    font-size: 30px;
+    font-weight: 1000;
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding: 0px 0px 20px 15px;
+}
+
+.ri-close-circle-fill{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    transition: transform 0.3s;
+}
+
+.ri-close-circle-fill:hover{
+    color: red;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/* ---------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------- */
+
+.header-2{
+    display: flex;
+    gap: 180px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+}
+
+.orange-zingo{
+    height: 120px;
+    margin-left: 140px;
+    cursor: pointer;
+}
+
+.navbar-2{
+    display: flex;
+    margin-top: 10px;
+    gap: 15px;
+    background: linear-gradient(90deg, #FF512F, #F09819);
+    height: 79px;
+    border-radius: 10px;
+}
+
+.navbar-2-temp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.extra1-temp{
+    margin-left: 20px;
+}
+
+.extra2-temp{
+    margin-right: 20px;
+}
+
+.navbar-2-icon{
+    font-size: 30px;
+}
+
+.ri-briefcase-fill{
+    color: #00FFFF;
+}
+
+.ri-information-2-fill{
+    color: #4169E1;
+}
+
+.ri-phone-fill{
+    color: #4B0082;
+}
+
+.ri-shake-hands-fill{
+    color: #800080;
+}
+
+.ri-login-box-fill{
+    color: #1707f4;
+}
+
+.navbar-BTN{
+    position: relative;
+    top: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding: 5px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 
+        0px 0px 0px 5px white,
+        0px -4px 0px 4px #ffcc33;
+    transition: transform 0.35s;
+}
+
+.navbar-BTN:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    background: linear-gradient(90deg, #FF512F, #F09819);
+}
+/* ----------------------------------------------------------------- */
+
+.khana-slider .swiper{
+    width: 85%;
+}
+
+.khana-slider .swiper-slide{
+    width: 160px !important;
+}
+
+.khana-slider .swiper-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.khana-slider .swiper-text{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 20px;
+    position: relative;
+    left: 120px;
+    margin-bottom: 5px;
+}
+
+.khana-slider{
+    position: relative;
+}
+
+.khana-slider .mY-swiper-btn-prev,
+.khana-slider .mY-swiper-btn-next{
+    font-size: 40px;
+    color: #FF512F;
+}
+
+.khana-slider .mY-swiper-btn-prev:hover,
+.khana-slider .mY-swiper-btn-next:hover{
+    cursor: pointer;
+}
+
+.khana-slider .mY-swiper-btn-prev{
+    position: absolute;
+    z-index: 10;
+    display: inline-block;
+    top: 40%;
+    left: 25px;
+}
+
+.khana-slider .mY-swiper-btn-next{
+    position: absolute;
+    z-index: 10;
+    display: inline-block;
+    top: 40%;
+    right: 25px;
+}
+
+.hr-tag{
+    width: 85%; /* Shortens the line */
+    margin: auto; /* Centers the line */
+    margin-top: 40px; 
+    margin-bottom: 40px;
+    /* ----------Customize thickness and Color-------------- */
+    border: none;
+    height: 2px;
+    background-color: #F2F2F3;
+}
+/* ------------------------------ */
+
+.hotels-chd{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.card-container2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-left: 110px;
+    margin-bottom: 120px;
+}
+
+.rest-img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.rest-card{
+    position: relative;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.rest-overlay{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8),transparent);
+    border-radius: 20px;
+}
+
+.text-text{
+    display: flex;
+    gap: 6px;
+    font-family: "Mozilla Headline", sans-serif;
+    font-size: 11px;
+    position: absolute;
+    top: 170px;
+    left: 15px;
+    color: white;
+}
+
+.rest-name{
+    margin-top: 10px;  
+    margin-left: 10px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    white-space: nowrap; /* Prevent text from wrapping to next line */
+    /* The text is forced into a single line, and since the card we create always has a fixed width, the content overflows beyond the card */
+    overflow: hidden; /* Hide the overflowing text */
+    text-overflow: ellipsis; /* Add the "..." at the end */
+}
+
+.rating-time{
+    display: flex;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.rest-star{
+    background-color: #1D923C;
+    color: white;
+    width: 11px;
+    height: 11px;
+}
+
+.rest-rating{
+    font-size: 22px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.ri-circle-fill{
+    font-size: 8px;
+    position: relative;
+    top: 9px;
+    left: 5px;
+}
+
+.rest-time{
+    font-size: 22px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    bottom: 3px;
+    left: 15px;
+}
+
+.rest-cuisines{
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 10px;
+    color: #676A6D;
+}
+
+.rest-location{
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+    color: #676A6D;
+}
+
+.rest-card:hover{
+    cursor: pointer;
+    transform: scale(0.95);
+}
+/* ------------------------------------------- */
+/* Shimmer1 */
+
+.shimmer1-header{
+    display: flex;
+    gap: 600px;
+}
+
+.shimmer1-logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-left: 170px;
+    margin-top: 20px;
+}
+
+.shimmer1-navbar{
+    width: 674px;
+    height: 80px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.shimmer1-slider-text{
+    width: 200px;
+    height: 15px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-top: 58px;
+    margin-left: 130px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.shimmer1-circle-holder{
+    display: flex;
+    gap: 70px;
+    margin-left: 130px;
+}
+
+.shimmer1-circle{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    overflow: hidden;
+}
+
+.shimmer1-chd{
+    width: 1000px;
+    height: 50px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-top: 150px;
+    margin-left: 280px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.shimmer1-card-container{
+    display: flex;
+    gap: 30px;
+    margin-left: 120px;
+}
+
+.shimmer1-card{
+    width: 300px;
+    height: 336px;
+    border-radius: 20px;
+}
+
+.shimmer1-img{
+    width: 300px;
+    height: 200px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.shimmer1-text1{
+    width: 150px;
+    height: 20px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-left: 15px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.shimmer1-text2{
+    width: 250px;
+    height: 20px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-left: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.shimmer1-text3{
+    width: 100px;
+    height: 15px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-left: 15px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.shimmer1-text4{
+    width: 120px;
+    height: 15px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-left: 15px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.shimmer1-animation{
+    position: relative;
+}
+
+.shimmer1-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* A more pronounced white gradient for the new color scheme */
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    animation: shimmer1 1.5s infinite; /* Slowed animation slightly for a smoother feel */
+}
+
+@keyframes shimmer1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* ------------------------------------------- */
+
+.company-Name{
+    font-size: 28px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 390px;
+}
+
+.containER{
+    margin: auto;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #D9DADB;
+    border-radius: 20px;
+    width: 50%;
+    box-shadow: 
+        0 4px 8px rgba(0,0,0,0.08),
+        0 12px 24px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.containER:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 6px 12px rgba(0,0,0,0.12),
+        0 16px 32px rgba(0,0,0,0.08);
+}
+
+.rating{
+    display: flex;
+    font-size: 20px;
+    font-family:monospace;
+    font-weight: bolder;
+    letter-spacing: -0.8px;
+    padding: 20px 0px 5px 20px;
+}
+
+.rest-star1{
+    color: white;
+}
+
+.rest-rating{
+    font-size: 20px;
+    font-family:monospace;
+    font-weight: bolder;
+    margin-right: 5px;
+}
+
+.noOfRatings{
+    margin-right: 7px;
+}
+
+#dot{
+    color: rgba(2, 6, 12, 0.45);
+    margin-right: 20px;
+}
+
+.Rest-cuisines{
+    padding: 5px 0px 5px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 82, 0);
+    text-decoration: underline;
+}
+
+.rest-outlet{
+    padding: 5px 0px 5px 20px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+}
+
+.span{
+    font-weight: normal;
+    color: rgba(2, 6, 12, 0.6);
+}
+
+.rest-TIME{
+    padding: 5px 0px 20px 20px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bolder;
+    text-transform: lowercase;
+}
+/* ---------------------------------------------- */
+/* dealSlider */
+
+.dealSlider{
+    margin-top: 30px;
+    position: relative;
+}
+
+.dealSlider .swiper{
+    width: 50%;
+}
+
+.dealSlider .swiper-slide{
+    width: 328px !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #D9DADB;
+    border-radius: 20px;
+}
+
+.dealSlider .swiper-img{
+    height: 50px;
+}
+
+.dealSlider .deal-container{
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+}
+
+.dealSlider .deal-offer{
+    position: relative;
+    top: 5px;
+}
+
+.dealSlider .abc{
+    font-size: 18px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bolder;
+    margin-bottom: 2px;
+}
+
+.dealSlider .def{
+    font-size: 15px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bolder;
+    color: #8D8F91;
+}
+
+.dealSlider .DEALS{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 390px;
+    margin-bottom: 15px;
+}
+
+.dealSlider .my-swiper-btn-Prev,
+.dealSlider .my-swiper-btn-Next{
+    font-size: 35px;
+    color: #bdbdbd;
+}
+
+.dealSlider .my-swiper-btn-Prev:hover,
+.dealSlider .my-swiper-btn-Next:hover{
+    cursor: pointer;
+}
+
+.dealSlider .my-swiper-btn-Next{
+    position: absolute;
+    display: inline-block;
+    z-index: 10;
+    top: 0px;
+    right: 380px;
+}
+
+.dealSlider .my-swiper-btn-Prev{
+    position: absolute;
+    display: inline-block;
+    z-index: 10;
+    top: 0px;
+    right: 420px;
+}
+/* ------------------------------------------- */
+/* Menu Pic && Divider */
+
+.menu-pic{
+    position: relative;
+    left: 43%;
+    margin-top: 60px;
+}
+
+.divider{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: none;
+    height: 2px;
+    background-color: #D9DADB;
+}
+
+/* ------------------------------------------- */
+/* TopPicks Slider */
+
+.topPicks-slider{
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.topPicks-slider .swiper{
+    width: 50%;
+}
+
+.topPicks-slider .swiper-slide{
+    width: 310px !important;
+}
+
+.topPicks-slider .swiper-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.topPicks-slider .swiper-content{
+    position: relative;
+}
+
+.topPicks-slider .swiper-text{
+    position: absolute;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    top: 265px;
+    left: 15px;
+}
+
+.topPicks-slider .swiper-header{
+    margin-left: 390px;
+    margin-bottom: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.topPicks-slider .my-swiper-btN-prev,
+.topPicks-slider .my-swiper-btN-next{
+    font-size: 35px;
+    color: #bdbdbd;
+}
+
+.topPicks-slider .my-swiper-btN-prev:hover,
+.topPicks-slider .my-swiper-btN-next:hover{
+    cursor: pointer;
+}
+
+.topPicks-slider .my-swiper-btN-next{
+    position: absolute;
+    display: inline-block;
+    z-index: 10;
+    top: 0px;
+    right: 380px;
+}
+
+.topPicks-slider .my-swiper-btN-prev{
+    position: absolute;
+    display: inline-block;
+    z-index: 10;
+    top: 0px;
+    right: 420px;
+}
+/* --------------------------------------------- */
+.upper-bg{
+    height: 88px;
+}
+
+.all-time-text{
+    text-align: center;
+    font-size: 60px;
+    font-family: "Caveat", cursive;
+    font-weight: bolder;
+    color: #FD9D3E;
+    position: relative;
+    top: 50px;
+}
+
+.all-time-main{
+    background-color: #121619;
+    margin-top: -10px;
+    height: 870px;
+}
+
+.all-time-title{
+    text-align: center;
+    font-size: 75px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    color: white;
+    position: relative;
+    top: 40px;
+    margin-bottom: 100px;
+}
+
+.all-time-slider .swiper{
+    width: 80%;
+    border-radius: 20px;
+}
+
+.all-time-slider .swiper-slide{
+    width: 300px !important;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    transition: transform 0.3s;
+}
+
+.all-time-slider .swiper-slide:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.all-time-slider .swiper-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.all-time-slider .swiper-name{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.all-time-slider .swiper-description{
+    text-align: center;
+    color: #999999;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    /* ----------------------------------------------------------- */
+    /* Must use -webkit-box display to apply line-clamp */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* The magic property to apply ellipsis after a specific number of lines */
+    -webkit-line-clamp: 3;
+    line-clamp: 3; /* The standard, future-proof property */
+    /* Hide the overflowing text */
+    overflow: hidden;
+    /* --------------------------------------- */
+    margin-bottom: 15px;
+}
+
+.all-time-slider .price-rating{
+    display: flex;
+    justify-content: space-between;
+}
+
+.all-time-slider .price{
+    display: flex;
+    gap: 7px;
+    color: #FD9D3E;
+}
+
+.all-time-slider .swiper-price{
+    font-size: 20px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+}
+
+.all-time-slider .ri-price-tag-3-fill{
+    position: relative;
+    top: 3px;
+}
+
+.all-time-slider .rating{
+    position: relative;
+    bottom: 24px;
+    color: #20953C;
+    font-family: "Bricolage Grotesque", sans-serif;
+    gap: 5px;
+}
+
+.all-time-slider .ri-star-fill{
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+.all-time-slider .swiper-rating-count{
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    color: #676A6D;
+}
+
+.lower-bg{
+    height: 98px;
+    margin-bottom: 100px;
+}
+/* ----------------------------------------------------- */
+/* Veg/Non-Veg Functionality */
+
+.btn-grp-2{
+    margin-left: 380px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.veg-icon, .non-veg-icon{
+    height: 20px;
+    position: relative;
+    right: 15px;
+}
+
+.veg-btn, .non-veg-btn{
+    border: 1px solid #b9b9ba;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px 4px 20px;
+    border-radius: 50px;
+}
+
+.center-div{
+    position: relative;
+}
+
+.veg-div, .non-veg-div{
+    width: 48px;
+    height: 10px;
+    background-color: #D9DADB;
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    z-index: -99;
+    border-radius: 50px;
+}
+
+.veg-btn:hover, .non-veg-btn:hover{
+    cursor: pointer;
+}
+
+.empty-error-msg1{
+    font-size: 100px;
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+    text-align: center;
+    color: #fb443d;
+}
+
+.empty-error-msg2{
+    font-size: 55px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 100px;
+    color: #fa7a2b;
+}
+
+.explore-pic{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.empty-error-msg3{
+    font-size: 100px;
+    font-family: "Bebas Neue", sans-serif;
+    color: #facd2b;
+}
+
+.empty-error-pic{
+    height: 120px;
+}
+/* ------------------------------------------------------ */
+/* Cart Button */
+
+.btn-first-version{
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    font-size: 23px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    color: #1BA672;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    bottom: 40px;
+    left: 90px;
+    cursor: pointer;
+    border: 1px solid #B3B4B6;
+}
+
+.btn-second-version{
+    display: flex;
+    background-color: white;
+    width: 120px;
+    height: 40px;
+    position: relative;
+    bottom: 40px;
+    left: 90px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #B3B4B6;
+}
+
+.decrement{
+    width: 40px; /* 120/3 = 40 */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    background-color: white;
+    font-size: 23px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    color: #1BA672;
+}
+
+.showCount{
+    width: 40px; /* 120/3 = 40 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    color: #1BA672;
+}
+
+.increment{
+    width: 40px; /* 120/3 = 40 */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    background-color: white;
+    font-size: 23px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    color: #1BA672;
+}
+
+.decrement:hover, .increment:hover{
+    cursor: pointer;
+    background-color: #D9DADB;
+}
+/* ----------------------------------------------- */
+/* Navbar-Cart */
+
+.header-cart{
+    display: flex;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+}
+
+.cart-link,
+.cart-link:visited {
+  /* This prevents the text/icon from turning blue or purple */
+  color: inherit;
+
+  /* This removes the underline */
+  text-decoration: none;
+}
+
+.cart-img{
+    height: 60px;
+}
+
+.centering-div{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 21px;
+    left: 15px;
+}
+
+.item-count{
+    color: #00ff2f;
+    font-size: 25px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bolder;
+}
+
+.cart-heading{
+    font-size: 25px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bolder;
+    position: relative;
+    top: 20px;
+}
+
+.header-cart:hover .cart-heading{
+    color: #FF7431;
+}
+/* -------------------------------------------------------- */
+/* checkout-header */
+
+.checkout-header{
+    display: flex;
+    gap: 800px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.orange-zingo-1{
+    height: 120px;
+    cursor: pointer;
+}
+
+.secure-checkout{
+    display: flex;
+    position: relative;
+    left: 100px;
+}
+
+.secure{
+    font-size: 28px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    position: relative;
+    top: 42px;
+}
+
+.help-div{
+    position: relative;
+    top: 35px;
+}
+
+.help-icon{
+    font-size: 50px;
+}
+
+.help-btn{
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    position: relative;
+    bottom: 7px;
+    left: 10px;
+}
+
+.help-btn:hover{
+    cursor: pointer;
+    color: #FF7431;
+}
+/* ------------------------------------------ */
+/* shopping-cart */
+
+.your-cart-div{
+    display: flex;
+    gap: 10px;
+    margin-left: 700px;
+    margin-top: 20px;
+}
+
+.your-cart-pic{
+    height: 60px;
+}
+
+.your-cart{
+    font-size: 28px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    position: relative;
+    top: 15px;
+}
+
+.cart-hr-tag{
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: none;
+    height: 2px;
+    background-color: #F2F2F3;
+}
+
+/* ---------------------------------------------- */
+/* items in cart*/
+
+.item-pic{
+    width: 225px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.item{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.container-div{
+    width: 225px;
+    position: relative;
+    left: 365px;
+}
+
+.item-name{
+    font-size: 20px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.positioning-div{
+    position: relative;
+    left: 440px;
+    top: 93px;
+}
+
+.item-price{
+    font-size: 35px;
+    font-family: "Bebas Neue", sans-serif;
+    color: #35383D;
+    letter-spacing: 1.3px;
+    position: relative;
+    left: 715px;
+    top: 55px;
+}
+/* ----------------------------------------------------- */
+/* optional checkbox */
+
+.optional-checkbox{
+    display: flex;
+    gap: 20px;
+    position: relative;
+    left: 365px;
+    width: 760px;
+    margin-bottom: 50px;
+    border: 2px solid #9A9B9E;
+    padding: 10px 10px 15px 10px;
+}
+
+.option{
+    width: 35px;
+    height: 35px;
+    accent-color: #1BA672;
+    cursor: pointer;
+}
+
+.checkbox-txt-1{
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.checkbox-txt-2{
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #77797D;
+    font-weight: 600;
+}
+
+.optional-checkbox:hover{
+    cursor: pointer;
+    /* For shadow on all sides except top */
+    box-shadow: 
+        0 4px 8px rgba(0,0,0,0.08),
+        0 12px 24px rgba(0,0,0,0.06);
+}
+/* ----------------------------------------------------------- */
+/* Delivery Type Section */
+
+.div-one{
+    position: relative;
+    left: 365px;
+    width: 760px;
+    background-color: rgb(244, 244, 244);
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.delivery-type{
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    position: relative;
+    left: 285px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.delivery-image{
+    height: 30px;
+    position: relative;
+    top: 6px;
+}
+
+.div-three{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.div-four{
+    display: flex;
+}
+
+.radio-btn-1{
+    width: 20px;
+    height: 20px;
+    accent-color: #1BA672;
+}
+
+.div-five{
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    position: relative;
+    bottom: 12px;
+    left: 20px;
+}
+
+.overline-txt{
+    color: #828487;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.desc-one{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5px;
+    color: #767676;
+}
+
+.extra-five{
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    position: relative;
+    bottom: 7px;
+    left: 20px;
+}
+
+.time-one{
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    color: #35383D;
+}
+
+/* ------------------------------------------------------- */
+/* bill-details */
+
+.total-bill-div{
+    position: relative;
+    left: 365px;
+    width: 760px;
+}
+
+.bill-pic{
+    height: 40px;
+}
+
+.bill-details-div{
+    display: flex;
+    gap: 10px;
+}
+
+.bill-details{
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    margin-bottom: 25px;
+    position: relative;
+    top: 5px;
+}
+
+.bill-details-1, .delivery, .Gst{
+    display: flex;
+    justify-content: space-between;
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4D5054;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.bill-hr-tag-1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    height: 2px;
+    background-color: #E6E7E7;
+}
+
+.bill-hr-tag-2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    height: 3px;
+    background-color: black;
+}
+
+.bill-hr-tag-3{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    height: 3.3px;
+    background-color: black;
+}
+
+.total-bill{
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+/* ------------------------------------------ */
+/* Cancellation Policy */
+
+.cancellation-policy{
+    position: relative;
+    left: 365px;
+    margin-top: 50px;
+    border: 2px solid #E9E9EB;
+    width: 760px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.policy-txt-1{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    color: #3E4152;
+    margin-bottom: 15px;
+}
+
+.policy-txt-2{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cancellation-policy-link,
+.cancellation-policy-link:visited{
+    color: #FF5200;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-style: dotted;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+/* --------------------------------------------------- */
+/* clear-cart */
+
+.clear-cart-btn{
+    font-size: 27px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    border: none;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+    margin-left: 640px;
+    transition: all 0.3s;
+}
+
+.clear-cart-btn:hover{
+    cursor: pointer;
+    background-color: #e53935;
+    color: white;
+    border-color: #e53935;
+    box-shadow: 0px 0px 5px 3px rgba(255, 69, 58, 0.5);
+}
+/* --------------------------------------------------------------- */
+/* empty-cart-ui */
+
+.empty-cart-ui{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.empty-cart-ui-pic{
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.browse-restaurants{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    padding: 10px 25px 10px 25px;
+    background-color: #FF5200;
+    color: white;
+    border: none;
+}
+
+.browse-restaurants:hover{
+    cursor: pointer;
+    /* For shadow on all sides except top */
+    box-shadow: 
+        0 4px 8px rgba(0,0,0,0.08),
+        0 12px 24px rgba(0,0,0,0.06);
+}
+/* ------------------------------------------------------- */
+/* Shimmer2 */
+
+.shimmer2-header{
+    display: flex;
+    gap: 600px;
+}
+
+.shimmer2-logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-left: 170px;
+    margin-top: 20px;
+}
+
+.shimmer2-navbar{
+    width: 674px;
+    height: 80px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.shimmer2-rest-name{
+    width: 200px;
+    height: 34px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-left: 380px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+}
+
+.shimmer2-rest-box{
+    width: 780px;
+    height: 156px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-left: 380px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
+.shimmer-line{
+    width: 400px;
+    height: 15px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-left: 380px;
+    border-radius: 50px;
+}
+
+.shimmer2-animation{
+    position: relative;
+}
+
+.shimmer2-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* A more pronounced white gradient for the new color scheme */
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    animation: shimmer2 1.5s infinite; /* Slowed animation slightly for a smoother feel */
+}
+
+@keyframes shimmer2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+/* ------------------------------------------------- */
+/* search bar */
+
+.search-feature{
+    margin-left: 380px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4d4e4e;
+    width: 780px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 0px 15px 0px;
+    background-color: #E5E6E6;
+    cursor: pointer;
+}
+
+.shubham-s{
+    font-size: 20px;
+    font-weight: normal;
+    position: relative;
+    top: 2px;
+    right: 55px;
+    color: #686A6E;
+}
+/* ------------------------------------------------------ */
+/* routed-search-bar */
+
+.all-search{
+    margin-left: 380px;
+    margin-top: 30px;
+    border-bottom: 1px solid #c2c2c2;
+    width: 780px;
+}
+
+.ri-arrow-left-long-line{
+    font-size: 30px;
+    color: #494a4a;
+    cursor: pointer;
+}
+
+.search-bar{
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    position: relative;
+    bottom: 5px;
+}
+
+.shubham-saini{
+    font-size: 20px;
+    position: relative;
+    left: 450px;
+    color: #4D5054;
+}
+/* ----------------------------------------------- */
+/* Search-answers */
+
+.outer-DIV{
+    margin-left: 380px;
+    margin-top: 30px;
+    width: 780px;
+    display: flex;
+}
+
+.food-item-name{
+    font-size: 22px;
+    font-family:  "Bricolage Grotesque", sans-serif;
+    font-weight: bolder;
+    color: #414449;
+    margin-bottom: 8px;
+    width: 552px;
+}
+
+.all-offers{
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.food-price{
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1.1px;
+}
+
+.payal{
+    color: #1BA672;
+    position: relative;
+    top: 3px;
+    left: 5px;
+}
+
+.offer-tag1{
+    font-size: 13px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    position: relative;
+    top: 1px;
+    left: 8px;
+    color: #575758;
+}
+
+.offer-tag2{
+    font-size: 13px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    position: relative;
+    top: 1px;
+    left: 12px;
+    color: #575758;
+}
+
+.CONTENT{
+    width: 552px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: #676A6D;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+}
+
+.search-card{
+    position: relative;
+    left: 60px;
+}
+
+.search-img{
+    width: 156px;
+    height: 144px;
+    border-radius: 15px;
+}
+
+.positioning-div-2{
+    position: relative;
+    right: 72px;
+    top: 14px;
+}
+
+.suggestion-hr-tag{
+    width: 51%;
+    margin: auto;
+}
