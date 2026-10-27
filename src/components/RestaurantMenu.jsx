@@ -158,6 +158,8 @@ function RestaurantMenu(){
     }
 
     function getFilteredItems(items){
+        if (!items) return [];
+
         {/* Jab both VegFilter and NonVegFilter ki value false ho, it means user has
         not clicked any filter yet, so jo normal hai sab dikha do. */}
         if(VegFilter===false && NonVegFilter===false){
@@ -263,7 +265,7 @@ function RestaurantMenu(){
                     freeMode={true}
                 >
                     {
-                        dealData.map((obj3,index) => (
+                        dealData?.map((obj3,index) => (
                             <SwiperSlide key={index}>
                                 <div className="deal-container">
                                     <img src={"https://media-assets.swiggy.com/swiggy/image/upload/" + obj3?.info?.offerLogo} className="swiper-img"></img>
@@ -310,7 +312,7 @@ function RestaurantMenu(){
                 freeMode={true}
             >
                 {
-                    topPicksData.map((obj5,index) => (
+                    topPicksData?.map((obj5,index) => (
                         <SwiperSlide key={index}>
                             <div className="swiper-content">
                                 <img src={"https://media-assets.swiggy.com/swiggy/image/upload/" + obj5?.creativeId} className="swiper-img"></img>
