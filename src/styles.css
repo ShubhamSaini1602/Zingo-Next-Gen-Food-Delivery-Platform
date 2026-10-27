@@ -2115,6 +2115,16 @@ ion-icon[name="star"]{
     margin-left: 390px;
 }
 
+.FixingPic {
+    display: block;
+    width: 100%;
+    max-width: 770px; /* Adjust this to perfectly match the width of your text box below */
+    aspect-ratio: 21 / 9; 
+    object-fit: cover; 
+    margin: 0 auto 20px auto; 
+    border-radius: 20px; 
+}
+
 .containER{
     margin: auto;
     border-width: 2px;

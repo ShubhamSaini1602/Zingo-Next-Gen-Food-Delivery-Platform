@@ -40,12 +40,12 @@ function RestaurantMenu(){
         setdealData(data?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.offers);
         setTopPicksData(data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.carousel);
         // Nullish Coalescing for Subway- There is one extra step in Subway's API (accessing its category key too) for showing Subway's Menu...
-        setAllTimeFav(data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards ?? data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.categories[0]?.itemCards);
-        setMenuPart2(data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card?.itemCards ?? data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card?.categories[0]?.itemCards);
-        setMenuPart3(data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card?.itemCards ?? data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card?.categories[0]?.itemCards);
-        setMenuPart4(data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]?.card?.card?.itemCards ?? data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]?.card?.card?.categories[0]?.itemCards);
-        setMenuPart5(data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[6]?.card?.card?.itemCards ?? data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[6]?.card?.card?.categories[0]?.itemCards);
-        setMenuPart6(data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[9]?.card?.card?.itemCards ?? data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[9]?.card?.card?.categories[0]?.itemCards);
+        setAllTimeFav(data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards ?? data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.categories[0]?.itemCards);
+        setMenuPart2(data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card?.itemCards ?? data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card?.categories[0]?.itemCards);
+        setMenuPart3(data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card?.itemCards ?? data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card?.categories[0]?.itemCards);
+        setMenuPart4(data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]?.card?.card?.itemCards ?? data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]?.card?.card?.categories[0]?.itemCards);
+        setMenuPart5(data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[6]?.card?.card?.itemCards ?? data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[6]?.card?.card?.categories[0]?.itemCards);
+        setMenuPart6(data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[9]?.card?.card?.itemCards ?? data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[9]?.card?.card?.categories[0]?.itemCards);
         setLoading(false);
     }
 
@@ -235,6 +235,7 @@ function RestaurantMenu(){
 
         <div className="containeR">
             <h1 className="company-Name">{FoodData?.data?.cards[2]?.card?.card?.info?.name}</h1>
+            <img src={"https://media-assets.swiggy.com/swiggy/image/upload/" + FoodData?.data?.cards[2]?.card?.card?.info?.cloudinaryImageId} className="FixingPic" />
             <div className="containER">
                 <div className="rating">
                     <ion-icon name="star" className="rest-star1"></ion-icon>
@@ -248,45 +249,47 @@ function RestaurantMenu(){
                 <p className="rest-TIME">{FoodData?.data?.cards[2]?.card?.card?.info?.sla?.slaString}</p>
             </div>
             {/* ----------------- */}
-            <div className="dealSlider">
-                <h2 className="DEALS">Deals for you</h2>
-                <Swiper
-                    modules={[Navigation, Mousewheel, FreeMode]}
-                    navigation={{
-                        prevEl: ".my-swiper-btn-Prev",
-                        nextEl: ".my-swiper-btn-Next"
-                    }}
-                    spaceBetween={25}
-                    slidesPerView={"auto"}
-                    speed={900}
-                    mousewheel={{
-                        forceToAxis: true
-                    }}
-                    freeMode={true}
-                >
-                    {
-                        dealData?.map((obj3,index) => (
-                            <SwiperSlide key={index}>
-                                <div className="deal-container">
-                                    <img src={"https://media-assets.swiggy.com/swiggy/image/upload/" + obj3?.info?.offerLogo} className="swiper-img"></img>
-                                    <div className="deal-offer">
-                                        <p className="abc">{obj3?.info?.header}</p>
-                                        <p className="def">{obj3?.info?.description}</p>
+            {dealData && (
+                <div className="dealSlider">
+                    <h2 className="DEALS">Deals for you</h2>
+                    <Swiper
+                        modules={[Navigation, Mousewheel, FreeMode]}
+                        navigation={{
+                            prevEl: ".my-swiper-btn-Prev",
+                            nextEl: ".my-swiper-btn-Next"
+                        }}
+                        spaceBetween={25}
+                        slidesPerView={"auto"}
+                        speed={900}
+                        mousewheel={{
+                            forceToAxis: true
+                        }}
+                        freeMode={true}
+                    >
+                        {
+                            dealData?.map((obj3,index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="deal-container">
+                                        <img src={"https://media-assets.swiggy.com/swiggy/image/upload/" + obj3?.info?.offerLogo} className="swiper-img"></img>
+                                        <div className="deal-offer">
+                                            <p className="abc">{obj3?.info?.header}</p>
+                                            <p className="def">{obj3?.info?.description}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </SwiperSlide>
-                        ))
-                    }
-                </Swiper>
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
 
-                {/* Custom Nav buttons */}
-                <div className="my-swiper-btn-Prev">
-                    <i className="ri-arrow-left-circle-fill"></i>
+                    {/* Custom Nav buttons */}
+                    <div className="my-swiper-btn-Prev">
+                        <i className="ri-arrow-left-circle-fill"></i>
+                    </div>
+                    <div className="my-swiper-btn-Next">
+                        <i className="ri-arrow-right-circle-fill"></i>
+                    </div>
                 </div>
-                <div className="my-swiper-btn-Next">
-                    <i className="ri-arrow-right-circle-fill"></i>
-                </div>
-            </div>
+            )}
             {/* ----------------- */}
         </div>
 
@@ -367,7 +370,7 @@ function RestaurantMenu(){
             <img src="/upper-bg.png" className="upper-bg"></img>
             <div className="all-time-main">
                 <p className="all-time-text">All-time Favorites</p>
-                <p className="all-time-title">{FoodData?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.title}</p>
+                <p className="all-time-title">{FoodData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.title}</p>
                 <div className="all-time-slider">
                     <Swiper
                         modules={[Mousewheel,FreeMode]}
@@ -432,7 +435,7 @@ function RestaurantMenu(){
             <div className="all-time">
             <img src="/upper-bg.png" className="upper-bg"></img>
             <div className="all-time-main">
-                <p className="all-time-title">{FoodData?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card?.title}</p>
+                <p className="all-time-title">{FoodData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card?.title}</p>
                 <div className="all-time-slider">
                     <Swiper
                         modules={[Mousewheel,FreeMode]}
@@ -501,7 +504,7 @@ function RestaurantMenu(){
             <div className="all-time">
             <img src="/upper-bg.png" className="upper-bg"></img>
             <div className="all-time-main">
-                <p className="all-time-title">{FoodData?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card?.title}</p>
+                <p className="all-time-title">{FoodData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card?.title}</p>
                 <div className="all-time-slider">
                     <Swiper
                         modules={[Mousewheel,FreeMode]}
@@ -565,7 +568,7 @@ function RestaurantMenu(){
             <div className="all-time">
             <img src="/upper-bg.png" className="upper-bg"></img>
             <div className="all-time-main">
-                <p className="all-time-title">{FoodData?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]?.card?.card?.title}</p>
+                <p className="all-time-title">{FoodData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]?.card?.card?.title}</p>
                 <div className="all-time-slider">
                     <Swiper
                         modules={[Mousewheel,FreeMode]}
@@ -629,7 +632,7 @@ function RestaurantMenu(){
             <div className="all-time">
             <img src="/upper-bg.png" className="upper-bg"></img>
             <div className="all-time-main">
-                <p className="all-time-title">{FoodData?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[6]?.card?.card?.title}</p>
+                <p className="all-time-title">{FoodData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[6]?.card?.card?.title}</p>
                 <div className="all-time-slider">
                     <Swiper
                         modules={[Mousewheel,FreeMode]}
@@ -693,7 +696,7 @@ function RestaurantMenu(){
             <div className="all-time">
             <img src="/upper-bg.png" className="upper-bg"></img>
             <div className="all-time-main">
-                <p className="all-time-title">{FoodData?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[9]?.card?.card?.title}</p>
+                <p className="all-time-title">{FoodData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[9]?.card?.card?.title}</p>
                 <div className="all-time-slider">
                     <Swiper
                         modules={[Mousewheel,FreeMode]}
